@@ -4,14 +4,13 @@ using UnityEngine;
 public class EnemyLife : MonoBehaviour
 {
     public float enemyMaxHealth;
-    public TMP_Text enemyLifeText;
+    //public TMP_Text enemyLifeText;
 
     private float enemyHealthPoints;
 
     private void Start()
     {
         enemyHealthPoints = enemyMaxHealth;
-        UpdateEnemyHP_Text();
     }
 
     public void DealDamageToEnemy(float damage)
@@ -21,9 +20,8 @@ public class EnemyLife : MonoBehaviour
         if (enemyHealthPoints < 0)
         {
             enemyHealthPoints = 0;
-
         }
-        UpdateEnemyHP_Text();
+        CheckGameEnded();
     }
 
     public void HealPlayer(float heal)
@@ -34,11 +32,19 @@ public class EnemyLife : MonoBehaviour
         {
             enemyHealthPoints = enemyMaxHealth;
         }
-        UpdateEnemyHP_Text();
+        CheckGameEnded();
     }
 
     private void UpdateEnemyHP_Text()
     {
-        enemyLifeText.text = ("Enemy HP: " + enemyHealthPoints);
+        //enemyLifeText.text = ("Enemy HP: " + enemyHealthPoints);
+    }
+
+    private void CheckGameEnded()
+    {
+        if(enemyHealthPoints <=0)
+        {
+            StartCoroutine(GameManager.instance.WinGame());
+        }
     }
 }

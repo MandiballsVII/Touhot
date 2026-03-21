@@ -1,17 +1,17 @@
 using UnityEngine;
-using TMPro;
+using UnityEngine.UI;
 
 public class PlayerLife : MonoBehaviour
 {
     public float playerMaxHealth;
-    public TMP_Text playerLifeText;
+    public Slider playerLifeSlider;
     
     private float playerHealthPoints;
 
     private void Start()
     {
         playerHealthPoints = playerMaxHealth;
-        UpdatePlayerHP_Text();
+        UpdatePlayerHP_Slider();
     }
 
     public void DealDamageToPlayer(float damage)
@@ -23,7 +23,7 @@ public class PlayerLife : MonoBehaviour
             playerHealthPoints = 0;
 
         }
-        UpdatePlayerHP_Text();
+        UpdatePlayerHP_Slider();
     }
 
     public void HealPlayer(float heal)
@@ -34,11 +34,16 @@ public class PlayerLife : MonoBehaviour
         {
             playerHealthPoints = playerMaxHealth;
         }
-        UpdatePlayerHP_Text();
+        UpdatePlayerHP_Slider();
     }
 
-    private void UpdatePlayerHP_Text()
+    private void UpdatePlayerHP_Slider()
     {
-        playerLifeText.text = ("Player HP: " + playerHealthPoints);
+        playerLifeSlider.value = playerHealthPoints;
+        if(playerHealthPoints <=0)
+        {
+            StartCoroutine(GameManager.instance.LoseGame());
+        }
     }
+
 }

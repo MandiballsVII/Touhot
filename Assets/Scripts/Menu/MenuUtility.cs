@@ -1,16 +1,46 @@
+using Unity.VectorGraphics;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MenuUtility : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public void LoadScene(string sceneName)
     {
-        
+        SceneManager.LoadScene(sceneName);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void LoadMainMenuScene()
     {
-        
+        SceneManager.LoadScene("MainMenu");
     }
+
+    public void LoadLevelScene()
+    {
+        SceneManager.LoadScene("Level");
+    }
+
+    public void CloseGame()
+    {
+#if UNITY_STANDALONE
+        Application.Quit();
+#endif
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#endif
+    }
+
+    //public void PlayButtonSfx()
+    //{
+
+    //}
+
+    //public void PlayLevelMusic()
+    //{
+
+    //}
+
+    //public void PlayMainMenuMusic()
+    //{
+
+    //}
 }
