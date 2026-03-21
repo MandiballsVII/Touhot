@@ -119,6 +119,50 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &11224324
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 11224325}
+  - component: {fileID: 11224326}
+  m_Layer: 0
+  m_Name: AmbienceIntensity
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &11224325
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 11224324}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 341070391}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &11224326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 11224324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7584ee0267a5e8441acbd32084fc15ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AmbienceIntensity
 --- !u!1 &341070389
 GameObject:
   m_ObjectHideFlags: 0
@@ -162,6 +206,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1268140034}
+  - {fileID: 11224325}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &630637080
@@ -246,6 +291,20 @@ MonoBehaviour:
       Data3: -1702043759
       Data4: 480071423
     Path: event:/PlayerShoot
+  <ShipEngine>k__BackingField:
+    Guid:
+      Data1: 430663665
+      Data2: 1093963410
+      Data3: -566032222
+      Data4: 1528421264
+    Path: event:/ShipEngine
+  <Wind>k__BackingField:
+    Guid:
+      Data1: -295096143
+      Data2: 1252458190
+      Data3: -1550689095
+      Data4: 1099123358
+    Path: event:/Wind
 --- !u!1 &1365249830
 GameObject:
   m_ObjectHideFlags: 0
@@ -557,13 +616,6 @@ MonoBehaviour:
   fire: {fileID: 3405489297753115330, guid: 887b88fbc825e1f41a7453eea33fbfb3, type: 3}
   bullet: {fileID: 20674391197827159, guid: cc6edf6c73c5f3442acb957e5f3bb9fa, type: 3}
   bulletSpawner: {fileID: 630637081}
-  shootSound:
-    Guid:
-      Data1: 698984531
-      Data2: 1205858957
-      Data3: -1702043759
-      Data4: 480071423
-    Path: event:/PlayerShoot
 --- !u!70 &1670841668
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
