@@ -6,6 +6,7 @@ public class PlayerBullet : MonoBehaviour
     private float bulletSpeed;
     public float maxBulletSpeed;
     public float acceleration;
+    public float bulletDamage;
 
     private Rigidbody2D rb;
 
@@ -22,5 +23,14 @@ public class PlayerBullet : MonoBehaviour
         rb.linearVelocity = Vector2.up * bulletSpeed;
 
         //Debug.Log(rb.linearVelocity.magnitude);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Enemy")
+        {
+            collision.gameObject.GetComponent<EnemyLife>().DealDamageToEnemy(bulletDamage);
+            Destroy(this.gameObject);
+        }
     }
 }
