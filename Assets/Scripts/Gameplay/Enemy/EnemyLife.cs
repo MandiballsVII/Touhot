@@ -6,7 +6,8 @@ public class EnemyLife : MonoBehaviour
     public float enemyMaxHealth;
     //public TMP_Text enemyLifeText;
 
-    private float enemyHealthPoints;
+    [SerializeField]private float enemyHealthPoints;
+    public bool vulnerable = false;
 
     private void Start()
     {

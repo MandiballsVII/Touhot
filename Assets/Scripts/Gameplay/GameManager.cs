@@ -11,6 +11,10 @@ public class GameManager : MonoBehaviour
     public GameObject loseScreen;
     public MenuUtility menuUtility;
 
+    public Transform EnemyTransform_A;
+    public Transform EnemyTransform_B;
+    public Transform EnemyTransform_C;
+
     public static GameManager Instance
     {
         get

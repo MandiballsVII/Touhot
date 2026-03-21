@@ -29,7 +29,14 @@ public class PlayerBullet : MonoBehaviour
     {
         if (collision.tag == "Enemy")
         {
-            collision.gameObject.GetComponent<EnemyLife>().DealDamageToEnemy(bulletDamage);
+            if(collision.GetComponent<EnemyLife>().vulnerable)
+            {
+                collision.gameObject.GetComponent<EnemyLife>().DealDamageToEnemy(bulletDamage);
+            }
+            Destroy(this.gameObject);
+        }else if(collision.tag == "EnemyEye")
+        {
+            collision.gameObject.GetComponent<EnemyEyeLogic>().TakeDamage(bulletDamage);
             Destroy(this.gameObject);
         }
     }

@@ -18,14 +18,14 @@ MonoBehaviour:
   EndWait: 0
   patternSettings:
   - numberOfBullets: 4
-    bulletSpeed: 6
+    bulletSpeed: 12
     CooldownAfterShot: 0.2
     phaseOffset: 0
     angleOffset: 0
     RadialMask: 0
     MaskAngle: 180
   - numberOfBullets: 8
-    bulletSpeed: 8
+    bulletSpeed: 16
     CooldownAfterShot: 0.3
     phaseOffset: 0
     angleOffset: 0
