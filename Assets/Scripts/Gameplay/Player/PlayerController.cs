@@ -1,7 +1,6 @@
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using FMODUnity;
 
 public class PlayerController: MonoBehaviour
 {
@@ -18,8 +17,6 @@ public class PlayerController: MonoBehaviour
     public GameObject bullet;
 
     public Transform bulletSpawner;
-
-    [SerializeField] private EventReference shootSound;
 
 
     private void OnEnable()
@@ -51,6 +48,6 @@ public class PlayerController: MonoBehaviour
     private void Shoot(InputAction.CallbackContext context)
     {
         Instantiate(bullet, bulletSpawner.position, Quaternion.identity);
-        AudioManager.Instance.PlayOneShot(shootSound, transform.position);
+        AudioManager.Instance.PlayOneShot(FMOD_Events.Instance.PlayerShoot, transform.position);
     }
 }

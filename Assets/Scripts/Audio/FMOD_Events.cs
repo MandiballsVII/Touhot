@@ -1,16 +1,25 @@
 using UnityEngine;
+using FMODUnity;
 
 public class FMOD_Events : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [field: Header("Player")]
+    [field: SerializeField] public EventReference PlayerShoot { get; private set; }
+    public static FMOD_Events Instance { get; private set; }
+
+    private void Awake()
     {
-        
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Debug.LogWarning("Multiple instances of FMOD_Events detected. Destroying duplicate.");
+            Destroy(gameObject);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 }
