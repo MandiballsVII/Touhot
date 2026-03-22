@@ -134,8 +134,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7ceb587e1fb3e046a9a1791fa24fb68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerBullet
-  startBulletSpeed: 10
-  maxBulletSpeed: 15
+  startBulletSpeed: 15
+  maxBulletSpeed: 20
   acceleration: 3
   bulletDamage: 20
   impact: {fileID: 177018483956856221, guid: 09df9d9ac666aab40bb4d0c8b45f5178, type: 3}

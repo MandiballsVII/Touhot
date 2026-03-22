@@ -386,6 +386,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1676948389}
     m_Modifications:
     - target: {fileID: 60483345826904564, guid: 9bb8adf5757251e488aabc6ca2dd5bed, type: 3}
+      propertyPath: MaxHealth
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 60483345826904564, guid: 9bb8adf5757251e488aabc6ca2dd5bed, type: 3}
       propertyPath: eyeWeapon
       value: 
       objectReference: {fileID: 1263789582}
@@ -832,6 +836,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1676948389}
     m_Modifications:
     - target: {fileID: 60483345826904564, guid: 9e74eb11bb31d834e87be00b0a44a0e3, type: 3}
+      propertyPath: MaxHealth
+      value: 1500
+      objectReference: {fileID: 0}
+    - target: {fileID: 60483345826904564, guid: 9e74eb11bb31d834e87be00b0a44a0e3, type: 3}
       propertyPath: eyeWeapon
       value: 
       objectReference: {fileID: 1192889206}
@@ -873,7 +881,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: b2bf1fdd20a99d04ca8adec59db39268, type: 2}
     - target: {fileID: 7180714074541599138, guid: 9e74eb11bb31d834e87be00b0a44a0e3, type: 3}
       propertyPath: testTime
-      value: 2.55
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8541878845449508384, guid: 9e74eb11bb31d834e87be00b0a44a0e3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1008,6 +1016,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1676948389}
     m_Modifications:
+    - target: {fileID: 60483345826904564, guid: 9bb8adf5757251e488aabc6ca2dd5bed, type: 3}
+      propertyPath: MaxHealth
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 60483345826904564, guid: 9bb8adf5757251e488aabc6ca2dd5bed, type: 3}
       propertyPath: eyeWeapon
       value: 
@@ -3130,7 +3142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9eae01c6db9fbea4caf0d637c9157737, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyLife
-  enemyMaxHealth: 100
+  enemyMaxHealth: 2000
   enemyHealthPoints: 0
   vulnerable: 0
   isEnemyDead: 0
@@ -3612,7 +3624,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2663464550813491569, guid: 3768a604979eba749a872256124767a7, type: 3}
       propertyPath: playerMaxHealth
-      value: 1000
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 2663464550813491569, guid: 3768a604979eba749a872256124767a7, type: 3}
       propertyPath: playerLifeSlider
@@ -3672,7 +3684,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6380360929433639833, guid: 3768a604979eba749a872256124767a7, type: 3}
       propertyPath: shotCoolDown
-      value: 0
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 7306370571116200275, guid: 3768a604979eba749a872256124767a7, type: 3}
       propertyPath: m_Name
@@ -3682,6 +3694,14 @@ PrefabInstance:
       propertyPath: enemyLife
       value: 
       objectReference: {fileID: 1676948386}
+    - target: {fileID: 7437178609531021991, guid: 3768a604979eba749a872256124767a7, type: 3}
+      propertyPath: lerpSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7437178609531021991, guid: 3768a604979eba749a872256124767a7, type: 3}
+      propertyPath: minTimeScale
+      value: 0.15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
