@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93ed37c4586ca2a409d1c581ca2c6a27, type: 3}
+  m_Name: EspiralV_6b
+  m_EditorClassIdentifier: Assembly-CSharp::RadialShotPattern
+  Repetitions: 50
+  angleOffsetBetweenReps: -20
+  StartWait: 0
+  EndWait: 0
+  patternSettings:
+  - numberOfBullets: 6
+    bulletSpeed: 12
+    CooldownAfterShot: 0.2
+    phaseOffset: 0
+    angleOffset: 0
+    RadialMask: 0
+    MaskAngle: 180
+  - numberOfBullets: 6
+    bulletSpeed: 12
+    CooldownAfterShot: 0.2
+    phaseOffset: 0
+    angleOffset: 6
+    RadialMask: 0
+    MaskAngle: 180
+  - numberOfBullets: 6
+    bulletSpeed: 12
+    CooldownAfterShot: 0.2
+    phaseOffset: 0
+    angleOffset: 12
+    RadialMask: 0
+    MaskAngle: 180
+  - numberOfBullets: 6
+    bulletSpeed: 12
+    CooldownAfterShot: 0.2
+    phaseOffset: 0
+    angleOffset: 18
+    RadialMask: 0
+    MaskAngle: 180
+  - numberOfBullets: 6
+    bulletSpeed: 12
+    CooldownAfterShot: 0.2
+    phaseOffset: 0
+    angleOffset: 24
+    RadialMask: 0
+    MaskAngle: 180
+  - numberOfBullets: 6
+    bulletSpeed: 12
+    CooldownAfterShot: 0.2
+    phaseOffset: 0
+    angleOffset: 30
+    RadialMask: 0
+    MaskAngle: 180
+  - numberOfBullets: 6
+    bulletSpeed: 12
+    CooldownAfterShot: 0.2
+    phaseOffset: 0
+    angleOffset: 24
+    RadialMask: 0
+    MaskAngle: 180
+  - numberOfBullets: 6
+    bulletSpeed: 12
+    CooldownAfterShot: 0.2
+    phaseOffset: 0
+    angleOffset: 18
+    RadialMask: 0
+    MaskAngle: 180
+  - numberOfBullets: 6
+    bulletSpeed: 12
+    CooldownAfterShot: 0.2
+    phaseOffset: 0
+    angleOffset: 12
+    RadialMask: 0
+    MaskAngle: 180
+  - numberOfBullets: 6
+    bulletSpeed: 12
+    CooldownAfterShot: 0.2
+    phaseOffset: 0
+    angleOffset: 6
+    RadialMask: 0
+    MaskAngle: 180

@@ -8,7 +8,7 @@ public class RS_Visualizer : MonoBehaviour
     [SerializeField] private RadialShotPattern pattern;
     [SerializeField] private float radius;
     [SerializeField] private Color color;
-    [SerializeField, Range(0f, 5f)] private float testTime;
+    [SerializeField, Range(0f, 10f)] private float testTime;
 
     private void OnDrawGizmos()
     {

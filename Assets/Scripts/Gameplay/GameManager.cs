@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public GameObject winGame;
     public GameObject loseScreen;
     public MenuUtility menuUtility;
+    public RadialShotPattern[] patterns;
 
     public Transform EnemyTransform_A;
     public Transform EnemyTransform_B;
