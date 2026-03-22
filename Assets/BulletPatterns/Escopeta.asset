@@ -18,7 +18,7 @@ MonoBehaviour:
   EndWait: 0
   patternSettings:
   - numberOfBullets: 8
-    bulletSpeed: 10
+    bulletSpeed: 7
     CooldownAfterShot: 0.03
     phaseOffset: 0
     angleOffset: -50
@@ -28,18 +28,11 @@ MonoBehaviour:
     bulletSpeed: 11
     CooldownAfterShot: 0.03
     phaseOffset: 0
-    angleOffset: -57
+    angleOffset: -35
     RadialMask: 1
     MaskAngle: 45
   - numberOfBullets: 8
-    bulletSpeed: 11
-    CooldownAfterShot: 0.03
-    phaseOffset: 0
-    angleOffset: -41.81347
-    RadialMask: 1
-    MaskAngle: 45
-  - numberOfBullets: 8
-    bulletSpeed: 11
+    bulletSpeed: 6
     CooldownAfterShot: 0.03
     phaseOffset: 0
     angleOffset: -67.3153
@@ -60,24 +53,10 @@ MonoBehaviour:
     RadialMask: 1
     MaskAngle: 45
   - numberOfBullets: 8
-    bulletSpeed: 10
-    CooldownAfterShot: 0.03
-    phaseOffset: 0
-    angleOffset: -72
-    RadialMask: 1
-    MaskAngle: 45
-  - numberOfBullets: 8
     bulletSpeed: 12
     CooldownAfterShot: 0.03
     phaseOffset: 0
     angleOffset: -63
-    RadialMask: 1
-    MaskAngle: 45
-  - numberOfBullets: 8
-    bulletSpeed: 13
-    CooldownAfterShot: 0.03
-    phaseOffset: 0
-    angleOffset: -53
     RadialMask: 1
     MaskAngle: 45
   - numberOfBullets: 8
@@ -91,21 +70,14 @@ MonoBehaviour:
     bulletSpeed: 12
     CooldownAfterShot: 0.03
     phaseOffset: 0
-    angleOffset: -38
+    angleOffset: -25
     RadialMask: 1
     MaskAngle: 45
   - numberOfBullets: 8
     bulletSpeed: 13
     CooldownAfterShot: 0.03
     phaseOffset: 0
-    angleOffset: -49.1
-    RadialMask: 1
-    MaskAngle: 45
-  - numberOfBullets: 8
-    bulletSpeed: 13
-    CooldownAfterShot: 0.03
-    phaseOffset: 0
-    angleOffset: -57.5
+    angleOffset: -46
     RadialMask: 1
     MaskAngle: 45
   - numberOfBullets: 8
@@ -119,20 +91,20 @@ MonoBehaviour:
     bulletSpeed: 13
     CooldownAfterShot: 0.03
     phaseOffset: 0
-    angleOffset: -50.2
+    angleOffset: -55
     RadialMask: 1
     MaskAngle: 45
   - numberOfBullets: 8
     bulletSpeed: 13
     CooldownAfterShot: 0.03
     phaseOffset: 0
-    angleOffset: -62.7
+    angleOffset: -63
     RadialMask: 1
     MaskAngle: 45
   - numberOfBullets: 8
-    bulletSpeed: 14
+    bulletSpeed: 12
     CooldownAfterShot: 0.5
     phaseOffset: 0
-    angleOffset: -37.4
+    angleOffset: -38
     RadialMask: 1
     MaskAngle: 45

@@ -562,8 +562,8 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: -0.0625
-    y: -0.074074075
+    x: 0.33333334
+    y: -0.0027777776
     width: 0.33333334
     height: 0.3333333
   near clip plane: 0.3
@@ -2977,8 +2977,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8f5d99fa06b165499f9a21e49ac9599, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RS_Visualizer
-  pattern: {fileID: 11400000, guid: 101da1a03c1b81548b7a3ada08efa255, type: 2}
-  radius: 0.25
+  pattern: {fileID: 11400000, guid: f0874ba87dd6be044a8c5dcbeca77310, type: 2}
+  radius: 0.5
   color: {r: 1, g: 0.08018869, b: 0.08018869, a: 1}
   testTime: 0
 --- !u!114 &1635437146
@@ -3142,7 +3142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9eae01c6db9fbea4caf0d637c9157737, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyLife
-  enemyMaxHealth: 2000
+  enemyMaxHealth: 1000
   enemyHealthPoints: 0
   vulnerable: 0
   isEnemyDead: 0
@@ -3696,7 +3696,7 @@ PrefabInstance:
       objectReference: {fileID: 1676948386}
     - target: {fileID: 7437178609531021991, guid: 3768a604979eba749a872256124767a7, type: 3}
       propertyPath: lerpSpeed
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7437178609531021991, guid: 3768a604979eba749a872256124767a7, type: 3}
       propertyPath: minTimeScale
