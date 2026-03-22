@@ -34,9 +34,13 @@ public class EnemyEyeLogic : MonoBehaviour
                 GetComponentInChildren<RadialShotWeapon>().StopAllCoroutines();
                 eyeWeapon.shotPattern = GameManager.instance.patterns[4];
                 GetComponentInChildren<RadialShotWeapon>().onShotPattern = false;
+                AudioManager.Instance.PlayOneShot(FMOD_Events.Instance.EyeDestroyed, transform.position);
+            }
+            else
+            {
+                AudioManager.Instance.PlayOneShot(FMOD_Events.Instance.Impact, transform.position);
             }
             fullEnemy.CheckVulnerableStatus();
-            AudioManager.Instance.PlayOneShot(FMOD_Events.Instance.Impact, transform.position);
         }
         else
         {

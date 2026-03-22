@@ -398,6 +398,10 @@ PrefabInstance:
       value: EnemyEye16x16
       objectReference: {fileID: 0}
     - target: {fileID: 1082581618273748517, guid: 9bb8adf5757251e488aabc6ca2dd5bed, type: 3}
+      propertyPath: enemyLife
+      value: 
+      objectReference: {fileID: 1676948386}
+    - target: {fileID: 1082581618273748517, guid: 9bb8adf5757251e488aabc6ca2dd5bed, type: 3}
       propertyPath: shotPattern
       value: 
       objectReference: {fileID: 11400000, guid: d46d835676ba7be459eb47dd11771fa5, type: 2}
@@ -554,10 +558,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.46207866
-    y: 0.052434456
-    width: 0.4494382
-    height: 0.44943818
+    x: 0
+    y: 0
+    width: 1
+    height: 1
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -844,6 +848,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1082581618273748517, guid: 9e74eb11bb31d834e87be00b0a44a0e3, type: 3}
+      propertyPath: enemyLife
+      value: 
+      objectReference: {fileID: 1676948386}
+    - target: {fileID: 1082581618273748517, guid: 9e74eb11bb31d834e87be00b0a44a0e3, type: 3}
       propertyPath: shotPattern
       value: 
       objectReference: {fileID: 11400000, guid: d46d835676ba7be459eb47dd11771fa5, type: 2}
@@ -1012,6 +1020,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyEye16x16 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1082581618273748517, guid: 9bb8adf5757251e488aabc6ca2dd5bed, type: 3}
+      propertyPath: enemyLife
+      value: 
+      objectReference: {fileID: 1676948386}
     - target: {fileID: 1082581618273748517, guid: 9bb8adf5757251e488aabc6ca2dd5bed, type: 3}
       propertyPath: shotPattern
       value: 
@@ -2256,6 +2268,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RadialShotWeapon
   shotPattern: {fileID: 11400000, guid: d46d835676ba7be459eb47dd11771fa5, type: 2}
   onShotPattern: 0
+  enemyLife: {fileID: 1676948386}
 --- !u!1001 &1099993950
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3107,6 +3120,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RadialShotWeapon
   shotPattern: {fileID: 11400000, guid: d46d835676ba7be459eb47dd11771fa5, type: 2}
   onShotPattern: 0
+  enemyLife: {fileID: 1676948386}
 --- !u!1 &1636788985
 GameObject:
   m_ObjectHideFlags: 0

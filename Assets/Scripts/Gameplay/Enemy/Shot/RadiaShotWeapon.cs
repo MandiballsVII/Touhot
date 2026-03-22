@@ -6,10 +6,11 @@ public class RadialShotWeapon : MonoBehaviour
     public RadialShotPattern shotPattern;
     Vector2 center;
     [HideInInspector] public bool onShotPattern = false;
+    [SerializeField] private EnemyLife enemyLife;
 
     private void Update()
     {
-        if (onShotPattern)
+        if (onShotPattern || enemyLife.isEnemyDead)
         {
             return;
         }
