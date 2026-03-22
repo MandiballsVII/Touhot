@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93ed37c4586ca2a409d1c581ca2c6a27, type: 3}
   m_Name: EspiralV_6b
   m_EditorClassIdentifier: Assembly-CSharp::RadialShotPattern
-  Repetitions: 50
+  Repetitions: 36
   angleOffsetBetweenReps: -20
   StartWait: 0
   EndWait: 0

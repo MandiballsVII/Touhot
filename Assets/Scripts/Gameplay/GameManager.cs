@@ -13,6 +13,10 @@ public class GameManager : MonoBehaviour
     public RadialShotPattern[] patterns;
     public EnemyEyeLogic[] enemyEyes;
 
+    public RadialShotWeapon[] mouthWeapon;
+
+    [HideInInspector] public bool allEyesDead = false;
+
     public Transform EnemyTransform_A;
     public Transform EnemyTransform_B;
     public Transform EnemyTransform_C;

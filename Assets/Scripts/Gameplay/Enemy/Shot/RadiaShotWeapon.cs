@@ -26,7 +26,6 @@ public class RadialShotWeapon : MonoBehaviour
 
         while (lap < pattern.Repetitions)
         {
-            center = transform.position;
             if (lap >0 && pattern.angleOffsetBetweenReps != 0f)
             {
                 aimDirection  = aimDirection.Rotate(pattern.angleOffsetBetweenReps);
@@ -34,6 +33,7 @@ public class RadialShotWeapon : MonoBehaviour
 
             for(int i = 0; i < pattern.patternSettings.Length; i++)
             {
+                center = transform.position;
                 ShotAttack.RadialShot(center, aimDirection, pattern.patternSettings[i]);
                 yield return new WaitForSeconds(pattern.patternSettings[i].CooldownAfterShot);
             }

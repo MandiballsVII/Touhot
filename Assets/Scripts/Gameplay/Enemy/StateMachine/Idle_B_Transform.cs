@@ -11,24 +11,32 @@ public class Idle_B_Transform : StateMachineBehaviour
         stayTime = Random.Range(minStayTime, maxStayTime);
 
         //Pattern Asignments
-        for (int i = 0; i < GameManager.instance.enemyEyes.Length; i++)
+        if (!GameManager.instance.allEyesDead)
         {
-            if (!GameManager.instance.enemyEyes[i].isBroken)
+            for (int i = 0; i < GameManager.instance.enemyEyes.Length; i++)
             {
-                if (i % 2 == 0)
+                if (!GameManager.instance.enemyEyes[i].isBroken)
                 {
-                    GameManager.instance.enemyEyes[i].eyeWeapon.shotPattern = GameManager.instance.patterns[0];
+                    if (i % 2 == 0)
+                    {
+                        GameManager.instance.enemyEyes[i].eyeWeapon.shotPattern = GameManager.instance.patterns[0];
+                    }
+                    else
+                    {
+                        GameManager.instance.enemyEyes[i].eyeWeapon.shotPattern = GameManager.instance.patterns[4];
+                    }
+
                 }
                 else
                 {
                     GameManager.instance.enemyEyes[i].eyeWeapon.shotPattern = GameManager.instance.patterns[4];
                 }
-
             }
-            else
-            {
-                GameManager.instance.enemyEyes[i].eyeWeapon.shotPattern = GameManager.instance.patterns[4];
-            }
+        }
+        else
+        {
+            GameManager.instance.mouthWeapon[0].shotPattern = GameManager.instance.patterns[2];
+            GameManager.instance.mouthWeapon[1].shotPattern = GameManager.instance.patterns[3];
         }
     }
 

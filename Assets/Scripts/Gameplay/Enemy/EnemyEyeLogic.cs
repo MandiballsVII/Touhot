@@ -11,10 +11,13 @@ public class EnemyEyeLogic : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     public RadialShotWeapon eyeWeapon;
 
+    private Animator animator;
+
     private void Start()
     {
         currentHealth = MaxHealth;
         spriteRenderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
     }
 
     public void TakeDamage(float amount)
@@ -22,11 +25,12 @@ public class EnemyEyeLogic : MonoBehaviour
         if(!isBroken)
         {
             currentHealth -= amount;
+            animator.SetTrigger("eyeHit");
             if (currentHealth <= 0)
             {
                 currentHealth = 0;
                 isBroken = true;
-                spriteRenderer.color = Color.black;
+                animator.SetBool("isBroken", true);
                 GetComponentInChildren<RadialShotWeapon>().StopAllCoroutines();
                 eyeWeapon.shotPattern = GameManager.instance.patterns[4];
                 GetComponentInChildren<RadialShotWeapon>().onShotPattern = false;

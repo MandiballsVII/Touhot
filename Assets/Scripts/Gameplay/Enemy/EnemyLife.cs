@@ -45,6 +45,8 @@ public class EnemyLife : MonoBehaviour
     {
         if(enemyHealthPoints <=0)
         {
+            GameManager.instance.mouthWeapon[0].StopAllCoroutines();
+            GameManager.instance.mouthWeapon[1].StopAllCoroutines();
             StartCoroutine(GameManager.instance.WinGame());
         }
     }

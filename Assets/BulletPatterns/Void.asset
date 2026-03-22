@@ -12,22 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93ed37c4586ca2a409d1c581ca2c6a27, type: 3}
   m_Name: Void
   m_EditorClassIdentifier: Assembly-CSharp::RadialShotPattern
-  Repetitions: 5
-  angleOffsetBetweenReps: 5
+  Repetitions: 0
+  angleOffsetBetweenReps: 0
   StartWait: 0
   EndWait: 0
   patternSettings:
-  - numberOfBullets: 4
-    bulletSpeed: 12
-    CooldownAfterShot: 0.2
+  - numberOfBullets: 0
+    bulletSpeed: 0
+    CooldownAfterShot: 10
     phaseOffset: 0
     angleOffset: 0
     RadialMask: 0
     MaskAngle: 180
-  - numberOfBullets: 8
-    bulletSpeed: 16
-    CooldownAfterShot: 0.3
-    phaseOffset: 0
-    angleOffset: 0
-    RadialMask: 0
-    MaskAngle: 360

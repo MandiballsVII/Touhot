@@ -35,7 +35,7 @@ public class EnemyInfo : MonoBehaviour
         {
             GetComponent<EnemyLife>().vulnerable = true;
             capsuleCollider.enabled = true;
-            Debug.Log("ahora es vulnerable");
+            GameManager.instance.allEyesDead = true;
         }
     }
 }

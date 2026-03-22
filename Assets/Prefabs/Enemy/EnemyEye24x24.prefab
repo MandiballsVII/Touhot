@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1318332089692921464}
   - component: {fileID: 7794017231144168500}
   - component: {fileID: 60483345826904564}
+  - component: {fileID: 3020449927152391235}
   m_Layer: 0
   m_Name: EnemyEye24x24
   m_TagString: EnemyEye
@@ -146,6 +147,29 @@ MonoBehaviour:
   MaxHealth: 100
   isBroken: 0
   fullEnemy: {fileID: 0}
+  eyeWeapon: {fileID: 0}
+--- !u!95 &3020449927152391235
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 347318262024007179}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 50f46791a96ae384296ba6a7ed105419, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1720641520815006225
 GameObject:
   m_ObjectHideFlags: 0
@@ -192,6 +216,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RadialShotWeapon
   shotPattern: {fileID: 11400000, guid: 101da1a03c1b81548b7a3ada08efa255, type: 2}
+  onShotPattern: 0
 --- !u!114 &7180714074541599138
 MonoBehaviour:
   m_ObjectHideFlags: 0
