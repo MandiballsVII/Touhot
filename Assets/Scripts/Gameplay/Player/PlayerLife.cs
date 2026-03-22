@@ -8,6 +8,8 @@ public class PlayerLife : MonoBehaviour
     
     private float playerHealthPoints;
 
+    private bool isPlayerDead = false;
+
     private void Start()
     {
         playerHealthPoints = playerMaxHealth;
@@ -40,8 +42,9 @@ public class PlayerLife : MonoBehaviour
     private void UpdatePlayerHP_Slider()
     {
         playerLifeSlider.value = playerHealthPoints;
-        if(playerHealthPoints <=0)
+        if(playerHealthPoints <=0 && !isPlayerDead)
         {
+            isPlayerDead = true;
             StartCoroutine(GameManager.instance.LoseGame());
         }
     }

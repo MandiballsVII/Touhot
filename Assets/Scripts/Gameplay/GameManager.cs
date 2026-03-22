@@ -54,7 +54,8 @@ public class GameManager : MonoBehaviour
     public IEnumerator LoseGame()
     {
         loseScreen.SetActive(true);
-        //player.GetComponent<PlayerController>().           //Hay que desactivar los controles del jugador, y a ser posible, ocultar el sprite.
+        player.GetComponent<PlayerController>().controlsEnabled = false;           //Hay que desactivar los controles del jugador, y a ser posible, ocultar el sprite.
+        AudioManager.Instance.PlayOneShot(FMOD_Events.Instance.Lose, transform.position);
         yield return new WaitForSeconds(endGameDelay);
         menuUtility.LoadScene("MainMenu");
     }

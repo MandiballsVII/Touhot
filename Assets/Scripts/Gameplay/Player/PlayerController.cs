@@ -23,6 +23,8 @@ public class PlayerController: MonoBehaviour
 
     private Animator animator;
 
+    public bool controlsEnabled = true;
+
 
     private void OnEnable()
     {
@@ -44,12 +46,22 @@ public class PlayerController: MonoBehaviour
 
     private void Update()
     {
+        if (!controlsEnabled)
+        {
+            rb.linearVelocity = Vector2.zero;
+            return;
+        }
         moveDirection = move.action.ReadValue<Vector2>();
         animator.SetFloat("direction", moveDirection.x);
     }
 
     private void FixedUpdate()
     {
+        if (!controlsEnabled)
+        {
+            rb.linearVelocity = Vector2.zero;
+            return;
+        }
         rb.linearVelocity = new Vector2 (moveDirection.x * moveSpeed, moveDirection.y * moveSpeed);
         UpdateSound();
     }
@@ -57,6 +69,8 @@ public class PlayerController: MonoBehaviour
 
     private void Shoot(InputAction.CallbackContext context)
     {
+        if (!controlsEnabled)
+            return;
         Instantiate(bullet, bulletSpawner.position, Quaternion.identity);
         AudioManager.Instance.PlayOneShot(FMOD_Events.Instance.PlayerShoot, transform.position);
     }
