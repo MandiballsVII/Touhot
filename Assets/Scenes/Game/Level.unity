@@ -972,6 +972,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 451b8607836766b41bf541ad5e8d496f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
+  MasterVolume: 1
+  MusicVolume: 1
+  AmbienceVolume: 1
+  SFXVolume: 1
 --- !u!4 &469435616
 Transform:
   m_ObjectHideFlags: 0
@@ -2015,6 +2019,62 @@ MonoBehaviour:
       Data3: -566032222
       Data4: 1528421264
     Path: event:/ShipEngine
+  <Lose>k__BackingField:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  <EyeDestroyed>k__BackingField:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  <Impact>k__BackingField:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  <Heal>k__BackingField:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  <ButtonPress>k__BackingField:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  <ButtonHover>k__BackingField:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  <MainMenuMusic>k__BackingField:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  <GameplayMusic>k__BackingField:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   <Wind>k__BackingField:
     Guid:
       Data1: -295096143

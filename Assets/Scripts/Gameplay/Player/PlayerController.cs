@@ -21,6 +21,8 @@ public class PlayerController: MonoBehaviour
 
     private EventInstance shipEngineInstance;
 
+    private Animator animator;
+
 
     private void OnEnable()
     {
@@ -36,11 +38,14 @@ public class PlayerController: MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         shipEngineInstance = AudioManager.Instance.CreateEventInstance(FMOD_Events.Instance.ShipEngine);
+        animator = GetComponent<Animator>();
+        animator.SetFloat("direction", 0);
     }
 
     private void Update()
     {
         moveDirection = move.action.ReadValue<Vector2>();
+        animator.SetFloat("direction", moveDirection.x);
     }
 
     private void FixedUpdate()
