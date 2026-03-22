@@ -323,7 +323,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 79.92, y: 0, z: -89.5}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 7.4491577}
+  m_AnchoredPosition: {x: 0, y: 7.4492188}
   m_SizeDelta: {x: 0, y: 232.6983}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &7409488
@@ -2395,10 +2395,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
+    x: -0.25
+    y: -0.18750001
+    width: 0.5
+    height: 0.37500003
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -4764,7 +4764,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\xA1TOUHOT!"
+  m_text: TOUHOT!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3cdecdc4ba08fd243bf8f52c38325909, type: 2}
   m_sharedMaterial: {fileID: 1263458545372457773, guid: 3cdecdc4ba08fd243bf8f52c38325909, type: 2}
@@ -4798,7 +4798,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
