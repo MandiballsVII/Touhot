@@ -162,6 +162,7 @@ GameObject:
   - component: {fileID: 2663464550813491569}
   - component: {fileID: 7035026564303150626}
   - component: {fileID: 1138111025106048501}
+  - component: {fileID: 8936603321684198418}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -270,7 +271,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!70 &2618362994915370956
 CapsuleCollider2D:
@@ -322,12 +323,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   rb: {fileID: 7118713403970915883}
-  moveSpeed: 5
+  moveSpeed: 15
   moveDirection: {x: 0, y: 0}
   move: {fileID: -4392187042438346873, guid: 887b88fbc825e1f41a7453eea33fbfb3, type: 3}
   fire: {fileID: 3405489297753115330, guid: 887b88fbc825e1f41a7453eea33fbfb3, type: 3}
   bullet: {fileID: 20674391197827159, guid: cc6edf6c73c5f3442acb957e5f3bb9fa, type: 3}
   bulletSpawner: {fileID: 8096041331061322325}
+  controlsEnabled: 1
+  shotCoolDown: 0
 --- !u!114 &7437178609531021991
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -340,6 +343,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 153b08bef2a283543a00e9e48f54e444, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TimeScaler
+  enemyLife: {fileID: 0}
   lerpSpeed: 4
   minTimeScale: 0.25
 --- !u!114 &2663464550813491569
@@ -354,7 +358,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18c29db0e14773d44ae522aa61094b00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerLife
-  playerMaxHealth: 100
+  playerMaxHealth: 1000
   playerLifeSlider: {fileID: 0}
 --- !u!114 &7035026564303150626
 MonoBehaviour:
@@ -408,3 +412,17 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8936603321684198418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7306370571116200275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioListener
+  nonRigidbodyVelocity: 0
+  attenuationObject: {fileID: 7306370571116200275}

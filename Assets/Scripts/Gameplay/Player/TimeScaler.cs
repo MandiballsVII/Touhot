@@ -4,6 +4,8 @@ public class TimeScaler : MonoBehaviour
 {
     private PlayerController playerController;
 
+    [SerializeField] private EnemyLife enemyLife;
+
     private float timeScale = 1;
 
     private float timeScaleObjective;
@@ -12,7 +14,7 @@ public class TimeScaler : MonoBehaviour
 
     public float minTimeScale;
 
-    private void Start()
+    private void Awake()
     {
         playerController = GetComponent<PlayerController>();
     }
@@ -20,6 +22,11 @@ public class TimeScaler : MonoBehaviour
 
     private void Update()
     {
+        if (enemyLife.isEnemyDead)
+        {
+            Time.timeScale = 1;
+            return;
+        }
         if(playerController.moveDirection != Vector2.zero)
         {
             timeScaleObjective = 1;

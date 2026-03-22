@@ -89,6 +89,24 @@ public class AudioManager : MonoBehaviour
         musicEventInstance.start(); 
     }
 
+    public void StopMusic(EventReference musicEventReference)
+    {
+        if(musicEventInstance.isValid())
+        {
+            musicEventInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            musicEventInstance.release();
+        }
+    }
+
+    public void StopAmbience(EventReference ambienceEventReference)
+    {
+        if(ambienceEventInstance.isValid())
+        {
+            ambienceEventInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            ambienceEventInstance.release();
+        }
+    }
+
     public void PlayOneShot(EventReference sound, Vector3 worldPos)
     {
         RuntimeManager.PlayOneShot(sound, worldPos);

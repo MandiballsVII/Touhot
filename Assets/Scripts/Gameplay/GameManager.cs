@@ -63,7 +63,12 @@ public class GameManager : MonoBehaviour
     public IEnumerator WinGame()
     {
         winGame.SetActive(true);
+        player.GetComponent<PlayerController>().controlsEnabled = false;
+        AudioManager.Instance.StopMusic(FMOD_Events.Instance.GameplayMusic);
+        AudioManager.Instance.PlayOneShot(FMOD_Events.Instance.WinGameMusic, transform.position);
+        AudioManager.Instance.CleanUp();
         yield return new WaitForSeconds(endGameDelay);
+        print("Volviendo al menú principal...");
         menuUtility.LoadScene("MainMenu");
     }
 }

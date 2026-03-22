@@ -20,6 +20,7 @@ public class FMOD_Events : MonoBehaviour
     [field: Header("Music")]
     [field: SerializeField] public EventReference MainMenuMusic { get; private set; }
     [field: SerializeField] public EventReference GameplayMusic { get; private set; }
+    [field: SerializeField] public EventReference WinGameMusic { get; private set; }
 
     [field: Header("Environment")]
     [field: SerializeField] public EventReference Wind { get; private set; }

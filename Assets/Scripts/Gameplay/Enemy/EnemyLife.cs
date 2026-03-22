@@ -8,6 +8,7 @@ public class EnemyLife : MonoBehaviour
 
     [SerializeField]private float enemyHealthPoints;
     public bool vulnerable = false;
+    public bool isEnemyDead = false;
 
     private void Start()
     {
@@ -43,8 +44,9 @@ public class EnemyLife : MonoBehaviour
 
     private void CheckGameEnded()
     {
-        if(enemyHealthPoints <=0)
+        if(enemyHealthPoints <=0 && !isEnemyDead)
         {
+            isEnemyDead = true;
             GameManager.instance.mouthWeapon[0].StopAllCoroutines();
             GameManager.instance.mouthWeapon[1].StopAllCoroutines();
             StartCoroutine(GameManager.instance.WinGame());
