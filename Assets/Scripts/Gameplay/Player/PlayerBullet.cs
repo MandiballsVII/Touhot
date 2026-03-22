@@ -8,6 +8,8 @@ public class PlayerBullet : MonoBehaviour
     public float acceleration;
     public float bulletDamage;
 
+    public GameObject impact;
+
     private Rigidbody2D rb;
 
     private void Start()
@@ -33,10 +35,12 @@ public class PlayerBullet : MonoBehaviour
             {
                 collision.gameObject.GetComponent<EnemyLife>().DealDamageToEnemy(bulletDamage);
             }
+            Instantiate(impact, this.transform.position, Quaternion.identity);
             Destroy(this.gameObject);
         }else if(collision.tag == "EnemyEye")
         {
             collision.gameObject.GetComponent<EnemyEyeLogic>().TakeDamage(bulletDamage);
+            Instantiate(impact, this.transform.position, Quaternion.identity);
             Destroy(this.gameObject);
         }
     }

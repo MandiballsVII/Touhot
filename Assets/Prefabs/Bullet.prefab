@@ -81,9 +81,9 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: -460294895
-  m_SortingLayer: 3
-  m_SortingOrder: 2
+  m_SortingLayerID: 524172557
+  m_SortingLayer: 4
+  m_SortingOrder: 5
   m_MaskInteraction: 0
   m_Sprite: {fileID: 2988552214572957592, guid: 80dca90243bfb6a47931df4a66d6e7c9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -138,6 +138,7 @@ MonoBehaviour:
   maxBulletSpeed: 15
   acceleration: 3
   bulletDamage: 20
+  impact: {fileID: 177018483956856221, guid: 09df9d9ac666aab40bb4d0c8b45f5178, type: 3}
 --- !u!70 &1512604316954543326
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

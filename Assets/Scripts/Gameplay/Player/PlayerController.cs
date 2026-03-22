@@ -25,6 +25,9 @@ public class PlayerController: MonoBehaviour
 
     public bool controlsEnabled = true;
 
+    public float shotCoolDown;
+    private float shotTimer;
+
 
     private void OnEnable()
     {
@@ -42,10 +45,12 @@ public class PlayerController: MonoBehaviour
         shipEngineInstance = AudioManager.Instance.CreateEventInstance(FMOD_Events.Instance.ShipEngine);
         animator = GetComponent<Animator>();
         animator.SetFloat("direction", 0);
+        shotTimer = shotCoolDown;
     }
 
     private void Update()
     {
+        shotTimer -= Time.deltaTime;
         if (!controlsEnabled)
         {
             rb.linearVelocity = Vector2.zero;
@@ -71,8 +76,13 @@ public class PlayerController: MonoBehaviour
     {
         if (!controlsEnabled)
             return;
-        Instantiate(bullet, bulletSpawner.position, Quaternion.identity);
-        AudioManager.Instance.PlayOneShot(FMOD_Events.Instance.PlayerShoot, transform.position);
+
+        if(shotTimer <=0)
+        {
+            shotTimer = shotCoolDown;
+            Instantiate(bullet, bulletSpawner.position, Quaternion.identity);
+            AudioManager.Instance.PlayOneShot(FMOD_Events.Instance.PlayerShoot, transform.position);
+        }
     }
 
     private void UpdateSound()

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3140849586120288572}
   - component: {fileID: 3184920803156876485}
   - component: {fileID: 4426797175982114329}
+  - component: {fileID: 641515965865960774}
   m_Layer: 0
   m_Name: PlayerBulletImpact
   m_TagString: Untagged
@@ -78,9 +79,9 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: -460294895
-  m_SortingLayer: 3
-  m_SortingOrder: 3
+  m_SortingLayerID: 524172557
+  m_SortingLayer: 4
+  m_SortingOrder: 5
   m_MaskInteraction: 0
   m_Sprite: {fileID: -1507720871660564610, guid: 244ecd3cff2e57d4abd0f60cf34b5bda, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -114,3 +115,15 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &641515965865960774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 177018483956856221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e5573b096262d4479902bcc82e8f34f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerBulletImpact
