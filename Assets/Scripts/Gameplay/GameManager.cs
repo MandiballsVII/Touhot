@@ -55,8 +55,9 @@ public class GameManager : MonoBehaviour
     {
         loseScreen.SetActive(true);
         player.GetComponent<PlayerController>().controlsEnabled = false;           //Hay que desactivar los controles del jugador, y a ser posible, ocultar el sprite.
+        AudioManager.Instance.CleanUp();
         AudioManager.Instance.PlayOneShot(FMOD_Events.Instance.Lose, transform.position);
-        yield return new WaitForSeconds(endGameDelay);
+        yield return new WaitForSeconds(endGameDelay - 2);
         menuUtility.LoadScene("MainMenu");
     }
 
