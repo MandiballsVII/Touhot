@@ -24,6 +24,7 @@ public class EnemyLife : MonoBehaviour
             enemyHealthPoints = 0;
         }
         CheckGameEnded();
+        AudioManager.Instance.PlayOneShot(FMOD_Events.Instance.Impact, transform.position);
     }
 
     public void HealPlayer(float heal)

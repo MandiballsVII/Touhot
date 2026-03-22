@@ -35,7 +35,11 @@ public class PlayerBullet : MonoBehaviour
             {
                 collision.gameObject.GetComponent<EnemyLife>().DealDamageToEnemy(bulletDamage);
             }
-            Instantiate(impact, this.transform.position, Quaternion.identity);
+            else
+            {
+                AudioManager.Instance.PlayOneShot(FMOD_Events.Instance.EnemyInvulnerable, transform.position);
+            }
+                Instantiate(impact, this.transform.position, Quaternion.identity);
             Destroy(this.gameObject);
         }else if(collision.tag == "EnemyEye")
         {

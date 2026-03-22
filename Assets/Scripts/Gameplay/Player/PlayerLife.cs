@@ -20,12 +20,13 @@ public class PlayerLife : MonoBehaviour
     {
         playerHealthPoints -= damage;
 
-        if(playerHealthPoints < 0)
+        if (playerHealthPoints < 0)
         {
             playerHealthPoints = 0;
 
         }
         UpdatePlayerHP_Slider();
+        AudioManager.Instance.PlayOneShot(FMOD_Events.Instance.ImpactOnPlayer, transform.position);
     }
 
     public void HealPlayer(float heal)

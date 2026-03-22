@@ -1717,6 +1717,20 @@ MonoBehaviour:
       Data3: 432699013
       Data4: 1147053869
     Path: event:/Impact
+  <ImpactOnPlayer>k__BackingField:
+    Guid:
+      Data1: 1689271080
+      Data2: 1082630929
+      Data3: -526778969
+      Data4: -1059533483
+    Path: event:/ImpactOnPlayer
+  <EnemyInvulnerable>k__BackingField:
+    Guid:
+      Data1: -1124292087
+      Data2: 1140760429
+      Data3: 1097747102
+      Data4: -1686092571
+    Path: event:/EnemyInvulnerable
   <Heal>k__BackingField:
     Guid:
       Data1: -1498371153
@@ -2382,10 +2396,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.46207866
-    y: 0.052434456
-    width: 0.4494382
-    height: 0.44943818
+    x: 0
+    y: 0
+    width: 1
+    height: 1
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60

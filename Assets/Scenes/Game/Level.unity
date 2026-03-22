@@ -2592,6 +2592,20 @@ MonoBehaviour:
       Data3: 0
       Data4: 0
     Path: 
+  <ImpactOnPlayer>k__BackingField:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  <EnemyInvulnerable>k__BackingField:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   <Heal>k__BackingField:
     Guid:
       Data1: 0
@@ -3915,7 +3929,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6380360929433639833, guid: 3768a604979eba749a872256124767a7, type: 3}
       propertyPath: shotCoolDown
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7306370571116200275, guid: 3768a604979eba749a872256124767a7, type: 3}
       propertyPath: m_Name

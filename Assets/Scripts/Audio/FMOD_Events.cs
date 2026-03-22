@@ -10,6 +10,8 @@ public class FMOD_Events : MonoBehaviour
     [field: SerializeField] public EventReference Lose { get; private set; }
     [field: SerializeField] public EventReference EyeDestroyed { get; private set; }
     [field: SerializeField] public EventReference Impact { get; private set; }
+    [field: SerializeField] public EventReference ImpactOnPlayer { get; private set; }
+    [field: SerializeField] public EventReference EnemyInvulnerable { get; private set; }
     [field: SerializeField] public EventReference Heal { get; private set; }
 
     [field: Header("UI")]

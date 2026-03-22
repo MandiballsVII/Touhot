@@ -36,6 +36,11 @@ public class EnemyEyeLogic : MonoBehaviour
                 GetComponentInChildren<RadialShotWeapon>().onShotPattern = false;
             }
             fullEnemy.CheckVulnerableStatus();
+            AudioManager.Instance.PlayOneShot(FMOD_Events.Instance.Impact, transform.position);
+        }
+        else
+        {
+            AudioManager.Instance.PlayOneShot(FMOD_Events.Instance.EnemyInvulnerable, transform.position);
         }
     }
 }
