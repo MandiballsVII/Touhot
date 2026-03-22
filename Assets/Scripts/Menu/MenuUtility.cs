@@ -29,18 +29,14 @@ public class MenuUtility : MonoBehaviour
 #endif
     }
 
-    //public void PlayButtonSfx()
-    //{
+    public void PressButtonSfx()
+    {
+        AudioManager.Instance.PlayOneShot(FMOD_Events.Instance.ButtonPress, transform.position);
+    }
 
-    //}
+    public void HoverButtonSfx()
+    {
+        AudioManager.Instance.PlayOneShot(FMOD_Events.Instance.ButtonHover, transform.position);
+    }
 
-    //public void PlayLevelMusic()
-    //{
-
-    //}
-
-    //public void PlayMainMenuMusic()
-    //{
-
-    //}
 }

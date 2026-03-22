@@ -7,6 +7,15 @@ public class FMOD_Events : MonoBehaviour
     [field: SerializeField] public EventReference PlayerShoot { get; private set; }
 
     [field: SerializeField] public EventReference ShipEngine { get; private set; }
+    [field: SerializeField] public EventReference Lose { get; private set; }
+    [field: SerializeField] public EventReference EyeDestroyed { get; private set; }
+    [field: SerializeField] public EventReference Impact { get; private set; }
+    [field: SerializeField] public EventReference Heal { get; private set; }
+
+    [field: Header("UI")]
+    [field: SerializeField] public EventReference ButtonPress { get; private set; }
+    [field: SerializeField] public EventReference ButtonHover { get; private set; }
+
 
     [field: Header("Music")]
     [field: SerializeField] public EventReference MainMenuMusic { get; private set; }
