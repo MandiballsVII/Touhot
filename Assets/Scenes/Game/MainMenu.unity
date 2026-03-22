@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 106671}
   - component: {fileID: 106670}
   - component: {fileID: 106669}
+  - component: {fileID: 106672}
   m_Layer: 5
   m_Name: Back
   m_TagString: Untagged
@@ -226,6 +227,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1187939801}
+        m_TargetAssemblyTypeName: MenuUtility, Assembly-CSharp
+        m_MethodName: PressButtonSfx
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &106670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -264,6 +277,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 106667}
   m_CullTransparentMesh: 1
+--- !u!114 &106672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 106667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f621758fbe76ce46842d9b7ec281852, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HoverButton
 --- !u!1 &9188506
 GameObject:
   m_ObjectHideFlags: 0
@@ -449,6 +474,7 @@ GameObject:
   - component: {fileID: 136524270}
   - component: {fileID: 136524269}
   - component: {fileID: 136524268}
+  - component: {fileID: 136524271}
   m_Layer: 5
   m_Name: Back
   m_TagString: Untagged
@@ -544,6 +570,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1187939801}
+        m_TargetAssemblyTypeName: MenuUtility, Assembly-CSharp
+        m_MethodName: PressButtonSfx
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &136524269
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -582,6 +620,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 136524266}
   m_CullTransparentMesh: 1
+--- !u!114 &136524271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 136524266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f621758fbe76ce46842d9b7ec281852, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HoverButton
 --- !u!1 &270028600
 GameObject:
   m_ObjectHideFlags: 0
@@ -1333,6 +1383,7 @@ GameObject:
   - component: {fileID: 673239644}
   - component: {fileID: 673239646}
   - component: {fileID: 673239645}
+  - component: {fileID: 673239647}
   m_Layer: 5
   m_Name: Slider
   m_TagString: Untagged
@@ -1438,6 +1489,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &673239647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 673239643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f621758fbe76ce46842d9b7ec281852, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HoverButton
 --- !u!1 &673568175
 GameObject:
   m_ObjectHideFlags: 0
@@ -1982,6 +2045,7 @@ GameObject:
   - component: {fileID: 754892066}
   - component: {fileID: 754892065}
   - component: {fileID: 754892064}
+  - component: {fileID: 754892067}
   m_Layer: 5
   m_Name: StartGame
   m_TagString: Untagged
@@ -2115,6 +2179,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 754892062}
   m_CullTransparentMesh: 1
+--- !u!114 &754892067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 754892062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f621758fbe76ce46842d9b7ec281852, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HoverButton
 --- !u!1 &798574912
 GameObject:
   m_ObjectHideFlags: 0
@@ -2162,10 +2238,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
+    x: 0.051192146
+    y: 0.051122196
+    width: 0.8976157
+    height: 0.8977556
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -2294,6 +2370,7 @@ GameObject:
   - component: {fileID: 813683005}
   - component: {fileID: 813683007}
   - component: {fileID: 813683006}
+  - component: {fileID: 813683008}
   m_Layer: 5
   m_Name: Slider
   m_TagString: Untagged
@@ -2399,6 +2476,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &813683008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 813683004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f621758fbe76ce46842d9b7ec281852, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HoverButton
 --- !u!1 &820598439
 GameObject:
   m_ObjectHideFlags: 0
@@ -3381,13 +3470,14 @@ GameObject:
   - component: {fileID: 1391252668}
   - component: {fileID: 1391252670}
   - component: {fileID: 1391252669}
+  - component: {fileID: 1391252671}
   m_Layer: 5
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1391252668
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3486,6 +3576,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1391252671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1391252667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f621758fbe76ce46842d9b7ec281852, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HoverButton
 --- !u!1 &1409802225
 GameObject:
   m_ObjectHideFlags: 0
@@ -4014,6 +4116,7 @@ GameObject:
   - component: {fileID: 1726416351}
   - component: {fileID: 1726416353}
   - component: {fileID: 1726416352}
+  - component: {fileID: 1726416354}
   m_Layer: 5
   m_Name: Slider
   m_TagString: Untagged
@@ -4119,6 +4222,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1726416354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1726416350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f621758fbe76ce46842d9b7ec281852, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HoverButton
 --- !u!1 &1760289263
 GameObject:
   m_ObjectHideFlags: 0
@@ -4268,6 +4383,7 @@ GameObject:
   - component: {fileID: 1764412331}
   - component: {fileID: 1764412330}
   - component: {fileID: 1764412329}
+  - component: {fileID: 1764412332}
   m_Layer: 5
   m_Name: Settings
   m_TagString: Untagged
@@ -4363,6 +4479,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1187939801}
+        m_TargetAssemblyTypeName: MenuUtility, Assembly-CSharp
+        m_MethodName: PressButtonSfx
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &1764412330
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4401,6 +4529,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1764412327}
   m_CullTransparentMesh: 1
+--- !u!114 &1764412332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1764412327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f621758fbe76ce46842d9b7ec281852, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HoverButton
 --- !u!1 &1772490944
 GameObject:
   m_ObjectHideFlags: 0
@@ -4631,6 +4771,7 @@ GameObject:
   - component: {fileID: 1793892639}
   - component: {fileID: 1793892638}
   - component: {fileID: 1793892637}
+  - component: {fileID: 1793892640}
   m_Layer: 5
   m_Name: Exit
   m_TagString: Untagged
@@ -4704,6 +4845,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1187939801}
         m_TargetAssemblyTypeName: MenuUtility, Assembly-CSharp
+        m_MethodName: PressButtonSfx
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1187939801}
+        m_TargetAssemblyTypeName: MenuUtility, Assembly-CSharp
         m_MethodName: CloseGame
         m_Mode: 1
         m_Arguments:
@@ -4752,6 +4905,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1793892635}
   m_CullTransparentMesh: 1
+--- !u!114 &1793892640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1793892635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f621758fbe76ce46842d9b7ec281852, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HoverButton
 --- !u!1 &1815232648
 GameObject:
   m_ObjectHideFlags: 0
@@ -4911,6 +5076,7 @@ GameObject:
   - component: {fileID: 1963951053}
   - component: {fileID: 1963951052}
   - component: {fileID: 1963951051}
+  - component: {fileID: 1963951054}
   m_Layer: 5
   m_Name: Credits
   m_TagString: Untagged
@@ -5006,6 +5172,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1187939801}
+        m_TargetAssemblyTypeName: MenuUtility, Assembly-CSharp
+        m_MethodName: PressButtonSfx
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &1963951052
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5044,6 +5222,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1963951049}
   m_CullTransparentMesh: 1
+--- !u!114 &1963951054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1963951049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f621758fbe76ce46842d9b7ec281852, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HoverButton
 --- !u!1 &1964592306
 GameObject:
   m_ObjectHideFlags: 0
