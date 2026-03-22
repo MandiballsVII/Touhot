@@ -298,6 +298,20 @@ MonoBehaviour:
       Data3: -566032222
       Data4: 1528421264
     Path: event:/ShipEngine
+  <MainMenuMusic>k__BackingField:
+    Guid:
+      Data1: -553105036
+      Data2: 1314434484
+      Data3: -1135834201
+      Data4: -295760496
+    Path: event:/MenuTheme
+  <GameplayMusic>k__BackingField:
+    Guid:
+      Data1: 1798340588
+      Data2: 1248822773
+      Data3: -494693750
+      Data4: -29086231
+    Path: event:/MainTheme
   <Wind>k__BackingField:
     Guid:
       Data1: -295096143

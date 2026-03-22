@@ -8,6 +8,10 @@ public class FMOD_Events : MonoBehaviour
 
     [field: SerializeField] public EventReference ShipEngine { get; private set; }
 
+    [field: Header("Music")]
+    [field: SerializeField] public EventReference MainMenuMusic { get; private set; }
+    [field: SerializeField] public EventReference GameplayMusic { get; private set; }
+
     [field: Header("Environment")]
     [field: SerializeField] public EventReference Wind { get; private set; }
     public static FMOD_Events Instance { get; private set; }

@@ -11,6 +11,8 @@ public class AudioManager : MonoBehaviour
 
     private EventInstance ambienceEventInstance;
 
+    private EventInstance musicEventInstance;
+
     private void Awake()
     {
         if (Instance == null)
@@ -30,6 +32,7 @@ public class AudioManager : MonoBehaviour
     private void Start()
     {
         InitializeAmbience(FMOD_Events.Instance.Wind);
+        InitializeMusic(FMOD_Events.Instance.MainMenuMusic);
     }
 
 
@@ -42,6 +45,12 @@ public class AudioManager : MonoBehaviour
     public void SetAmbienceParameter(string parameterName, float value)
     {
         ambienceEventInstance.setParameterByName(parameterName, value);
+    }
+
+    private void InitializeMusic(EventReference musicEventReference)
+    {
+        musicEventInstance = CreateEventInstance(musicEventReference);
+        musicEventInstance.start();
     }
 
     public void PlayOneShot(EventReference sound, Vector3 worldPos)
