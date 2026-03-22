@@ -4,10 +4,21 @@ public class EnemyInfo : MonoBehaviour
 {
     GameObject[] eyes;
     int deadEyes = 0;
+    CapsuleCollider2D capsuleCollider;
 
     private void Start()
     {
         eyes = GameObject.FindGameObjectsWithTag("EnemyEye");
+        capsuleCollider = GetComponent<CapsuleCollider2D>();
+        
+        if (GetComponent<EnemyLife>().vulnerable)
+        {
+            capsuleCollider.enabled = true;
+        }
+        else
+        {
+            capsuleCollider.enabled = false;
+        }
     }
 
     public void CheckVulnerableStatus()
@@ -23,6 +34,7 @@ public class EnemyInfo : MonoBehaviour
         if(deadEyes == eyes.Length) 
         {
             GetComponent<EnemyLife>().vulnerable = true;
+            capsuleCollider.enabled = true;
             Debug.Log("ahora es vulnerable");
         }
     }

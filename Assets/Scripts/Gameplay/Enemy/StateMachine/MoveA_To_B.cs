@@ -12,6 +12,26 @@ public class MoveA_To_B : StateMachineBehaviour
     {
         rb= animator.GetComponent<Rigidbody2D>();
         endPostition = GameManager.instance.EnemyTransform_B.transform;
+
+        for (int i = 0; i < GameManager.instance.enemyEyes.Length; i++)
+        {
+            if (!GameManager.instance.enemyEyes[i].isBroken)
+            {
+                if (i % 2 != 0)
+                {
+                    GameManager.instance.enemyEyes[i].eyeWeapon.shotPattern = GameManager.instance.patterns[1];
+                }
+                else
+                {
+                    GameManager.instance.enemyEyes[i].eyeWeapon.shotPattern = GameManager.instance.patterns[4];
+                }
+
+            }
+            else
+            {
+                GameManager.instance.enemyEyes[i].eyeWeapon.shotPattern = GameManager.instance.patterns[4];
+            }
+        }
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -31,5 +51,13 @@ public class MoveA_To_B : StateMachineBehaviour
     {
         rb.linearVelocity= Vector2.zero;
         animator.ResetTrigger("StopMoving");
+
+        //Stop all Radial Shot Weapon pattern usage
+        for (int i = 0; i < GameManager.instance.enemyEyes.Length; i++)
+        {
+            GameManager.instance.enemyEyes[i].GetComponentInChildren<RadialShotWeapon>().StopAllCoroutines();
+            GameManager.instance.enemyEyes[i].eyeWeapon.shotPattern = GameManager.instance.patterns[4];
+            GameManager.instance.enemyEyes[i].GetComponentInChildren<RadialShotWeapon>().onShotPattern = false;
+        }
     }
 }

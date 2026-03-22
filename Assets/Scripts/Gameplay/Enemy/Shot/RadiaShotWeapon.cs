@@ -3,9 +3,9 @@ using UnityEngine;
 
 public class RadialShotWeapon : MonoBehaviour
 {
-    [SerializeField] private RadialShotPattern shotPattern;
-
-    private bool onShotPattern = false;
+    public RadialShotPattern shotPattern;
+    Vector2 center;
+    [HideInInspector] public bool onShotPattern = false;
 
     private void Update()
     {
@@ -13,22 +13,21 @@ public class RadialShotWeapon : MonoBehaviour
         {
             return;
         }
-
         StartCoroutine(ExecuteRadialShotPattern(shotPattern));
     }
 
-    private IEnumerator ExecuteRadialShotPattern(RadialShotPattern pattern)
+    public IEnumerator ExecuteRadialShotPattern(RadialShotPattern pattern)
     {
         onShotPattern = true;
         int lap = 0;
         Vector2 aimDirection = transform.up * -1;
-        Vector2 center = transform.position;
 
         yield return new WaitForSeconds(pattern.StartWait);
 
         while (lap < pattern.Repetitions)
         {
-            if(lap >0 && pattern.angleOffsetBetweenReps != 0f)
+            center = transform.position;
+            if (lap >0 && pattern.angleOffsetBetweenReps != 0f)
             {
                 aimDirection  = aimDirection.Rotate(pattern.angleOffsetBetweenReps);
             }

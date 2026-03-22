@@ -5,13 +5,33 @@ public class Idle_A_Transform : StateMachineBehaviour
     [SerializeField]float minStayTime;
     [SerializeField]float maxStayTime;
     float stayTime;
+    
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        Debug.Log("Entered In IDLE_A_TRANSFORM");
-        //Set Radial Pattern;
         stayTime = Random.Range(minStayTime, maxStayTime);
+
+        //Pattern Asignments
+        for (int i = 0; i < GameManager.instance.enemyEyes.Length; i++) 
+        {
+            if (!GameManager.instance.enemyEyes[i].isBroken)
+            {
+                if (i % 2 == 0)
+                {
+                    GameManager.instance.enemyEyes[i].eyeWeapon.shotPattern = GameManager.instance.patterns[0];
+                }
+                else
+                {
+                    GameManager.instance.enemyEyes[i].eyeWeapon.shotPattern = GameManager.instance.patterns[4];
+                }
+
+            }
+            else
+            {
+                GameManager.instance.enemyEyes[i].eyeWeapon.shotPattern = GameManager.instance.patterns[4];
+            }
+        }
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -28,7 +48,14 @@ public class Idle_A_Transform : StateMachineBehaviour
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         animator.ResetTrigger("StartMoving");
-        Debug.Log("Exiting IDLE_A_TRANSFORM");
+
+        //Stop all Radial Shot Weapon pattern usage
+        for (int i = 0; i < GameManager.instance.enemyEyes.Length; i++)
+        {
+            GameManager.instance.enemyEyes[i].GetComponentInChildren<RadialShotWeapon>().StopAllCoroutines();
+            GameManager.instance.enemyEyes[i].eyeWeapon.shotPattern = GameManager.instance.patterns[4];
+            GameManager.instance.enemyEyes[i].GetComponentInChildren<RadialShotWeapon>().onShotPattern = false;
+        }
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()
