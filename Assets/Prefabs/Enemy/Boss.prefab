@@ -326,7 +326,7 @@ SpriteRenderer:
   m_SortingLayer: 4
   m_SortingOrder: 3
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 48400408fc746874ead832547b036fcf, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 77bd7e143388d4840a9a3b119141f699, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -802,6 +802,10 @@ PrefabInstance:
     - target: {fileID: 3009524233701798965, guid: 94ef5836498a46c4f9c0534eb8358a68, type: 3}
       propertyPath: m_Name
       value: piesBoss
+      objectReference: {fileID: 0}
+    - target: {fileID: 6693244558472357775, guid: 94ef5836498a46c4f9c0534eb8358a68, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.06
       objectReference: {fileID: 0}
     - target: {fileID: 6693244558472357775, guid: 94ef5836498a46c4f9c0534eb8358a68, type: 3}
       propertyPath: m_LocalPosition.x
