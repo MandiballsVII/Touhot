@@ -6,7 +6,7 @@ public class PlayerLife : MonoBehaviour
     public float playerMaxHealth;
     public Slider playerLifeSlider;
     
-    private float playerHealthPoints;
+    public float playerHealthPoints; //estaba privada
 
     private bool isPlayerDead = false;
 
@@ -37,6 +37,13 @@ public class PlayerLife : MonoBehaviour
         {
             playerHealthPoints = playerMaxHealth;
         }
+        UpdatePlayerHP_Slider();
+    }
+
+    public void miniHeal(float amount) //nueva void
+    {
+        playerHealthPoints += amount;
+        playerHealthPoints = Mathf.Clamp(playerHealthPoints, 0f, playerMaxHealth);
         UpdatePlayerHP_Slider();
     }
 
